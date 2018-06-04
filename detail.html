@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./static/vendor/semantic/semantic.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./static/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./static/vendor/glide/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./static/vendor/glide/dist/css/glide.theme.min.css" />
+    <script src="./static/js/jquery-3.3.1.min.js"></script>
+    <script src="./static/vendor/semantic/semantic.min.js"></script>
+    <script src="./static/js/infinite-scroll.pkgd.min.js"></script>
+    <script src="./static/js/vue1.js"></script>
+    <script src="./static/vendor/glide/dist/glide.min.js"></script>
+</head>
+
+<body class="pushable">
+
+    <!-- Sidebar -->
+    <div class="ui vertical inverted sidebar menu left">
+
+        <a class="item" href="/">
+            <i class="home icon"></i>首页</a>
+        <a class="item" href="#">
+            <i class="world icon"></i>资讯</a>
+        <a class="item" href="#">
+            <i class="fork icon"></i>教程</a>
+        <a class="item" href="#">
+            <i class="write icon"></i>练习</a>
+        <a class="item" href="#">
+            <i class="cloud download icon"></i>资源</a>
+        <a class="item" href="#">
+            <i class="leaf icon"></i>其他</a>
+        <a class="item" href="#">
+            <i class="user icon"></i>注册</a>
+        <a class="item" href="#">
+            <i class="sign in icon"></i>登录</a>
+    </div>
+
+    <div class="pusher">
+        <nav id=navbar class="ui stripe">
+            <div class="ui container inverted secondary menu">
+                <div class="header item">
+                    <a href="baidu.com" target="_blank" title="baidu">
+                        <img class="ui logo" src="./static/images/logo.png" alt="">
+                    </a>
+                </div>
+
+                <!-- 移动终端时的菜单，第一部分的Sidebar会在单击时出现 -->
+                <a href="#" class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <a class="item" href="#" target="_blank">首页</a>
+                <a class="item" href="#" target="_blank">资讯</a>
+                <a class="item" href="#" target="_blank">教程</a>
+                <a class="item" href="#" target="_blank">练习</a>
+                <a class="item" href="#" target="_blank">资源</a>
+                <a class="item" href="#" target="_blank">其他</a>
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui search">
+                            <div class="ui left icon input">
+                                <input type="text" class="prompt" placeholder="输入中文搜索词后空格" name="keywords" id="keywords" autocomplete="off">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="main">
+            <div class="ui container stackable grid">
+                <div class="articles eleven wide column">
+                    <!-- 文章部分 -->
+                    <div class="ui segment">
+                        <a href="#" class="ui red ribbon label">
+                            <i class="fork icon"></i>
+                            教程
+                        </a>
+
+                        <!-- 文章的div -->
+                        <div class="article">
+                            <!-- 标题 -->
+                            <div class="header">
+                                <a href="#">
+                                    <h1>第一篇文章</h1>
+                                </a>
+                            </div>
+
+                            <!-- 页眉 -->
+                            <div class="ui feed">
+                                <div class="event">
+                                    <div class="label">
+                                        <img src="./static/images/logo.png" alt="" class="avatar">
+                                    </div>
+                                    <div class="content">
+                                        <span class="date">1年前</span>
+                                        <span class="share-article avatar" data-tititl="阅读数">
+                                            <i class="eye icon"></i>7858</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 图片 -->
+                            <div class="image" style="padding-top: 0;text-align: center">
+                                <img src="./static/images/back.jpeg" alt="图片1">
+                            </div>
+
+                            <!-- 文章正文 -->
+                            <div class="article-content">
+                                <blockquote>
+                                    <p>原文：https://www.dataquest.io/blog/pandas-python-tutorial/</p>
+                                    <p>作者：Vik Paruchuri</p>
+                                    <p>译者：linkcheng</p>
+                                </blockquote>
+
+                                <p>Python 是进行数据分析的绝佳语言，主要原因是以数据为中心的 Python 包的奇妙生态系统。Pandas 就是其中之一，它使得导入和分析数据更容易。</p>
+
+
+                                <div class="copyright-box ui segment secondary grey">
+                                    <p>本站文章除注明转载外，均为本站原创或编译，如需转载，请联系微信公众号“编程派”获得授权。转载时，应注明来源、作者及原文链接。</p>
+                                </div>
+
+                                <div class="ui divider"></div>
+                                <div class="nearby">
+                                    <!-- 上一篇 -->
+                                    <div class="ui animated basic button teal" data-content="云计算产品性能测试指南" data-variation="wide">
+                                        <div class="visible content">上一篇</div>
+                                        <a href="#">
+                                            <div class="hidden content">
+                                                <i class="left arrow icon"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <!-- 分享按钮 -->
+                                    <div class="share-article ui button teal icon basic">
+                                        <i class="share alternate icon"></i>
+                                    </div>
+
+                                    <!-- 分享按钮窗口 -->
+                                    <div class="ui popup left center transition hidden" style="top: 23534.5px; right: 78.7031px; left: auto; bottom: auto;">
+                                        <div class="bdsharebuttonbox">
+                                            <!-- <a href="#" class="bds_more" data-cmd="more"></a> -->
+                                            <a href="#" class="item bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                            <a href="#" class="item bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                            <a href="#" class="item bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                            <a href="#" class="item bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                            <a href="#" class="item bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 文章的相关文章 -->
+                    <div id="related__wrapper" class="ui segment related-articles">
+                        <div class="ui pointing secondary menu section-title">
+                            <div class="active item">
+                                <i class="tags icon"></i>
+                                相关文章
+                            </div>
+                        </div>
+                        <div class="ui three stackable cards">
+                            <div class="ui fluid link card">
+                                <a href="#" title="aaaa">
+                                    <div class="image">
+                                        <div class="related-thumb lazy-hidden" style="background-image: url('./static/images/flask.png')">
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <a href="#" class="header">Codewars编码套路练习：给定一个正整数</a>
+                                </div>
+                            </div>
+
+                            <div class="ui fluid link card">
+                                <a href="#" title="aaaa">
+                                    <div class="image">
+                                        <div class="related-thumb lazy-hidden" style="background-image: url('./static/images/flask.png')">
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <a href="#" class="header">Codewars编码套路练习：给定一个正整数</a>
+                                </div>
+                            </div>
+
+                            <div class="ui fluid link card">
+                                <a href="#" title="aaaa">
+                                    <div class="image">
+                                        <div class="related-thumb lazy-hidden" style="background-image: url('./static/images/flask.png')">
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <a href="#" class="header">Codewars编码套路练习：给定一个正整数</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 文章的评论部分 -->
+                    <div id="comment__wrapper" class="ui segment">
+                        <div class="ui pointing secondary menu section-title">
+                            <div class="active item">
+                                <i class="comments icon"></i>文章评论
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 侧边栏 -->
+                <aside id="aside__wrapper" class="five wide column">
+                    <!-- 第一段推荐文章等 -->
+                    <div class="ui segment">
+
+                        <div id="tab-nav" class="ui pointing secondary menu">
+                            <a class="item active" data-tab="recommend">推荐阅读</a>
+                            <a class="item" data-tab="popular">热门文章</a>
+                            <a class="item" data-tab="random">随机发现</a>
+                        </div>
+
+                        <div class="ui tab active" data-tab="recommend">
+                            <div class="ui relaxed divided animated list">
+                                <div class="item">
+                                    <i class="leaf icon"></i>
+                                    <div class="content">
+                                        <a title="20天持续压测，云存储性能哪家更强？" href="http://www.codingpy.com/article/cloud-block-storage-performance-testing/" target="_blank">20天持续压测，云存储性能哪家更强？</a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="world icon"></i>
+                                    <div class="content">
+                                        <a title="国内公有云大幅降价后，首份一手云计算产品评测报告" href="http://www.codingpy.com/article/a-comparison-of-qcloud-and-aliyun-products/" target="_blank">国内公有云大幅降价后，首份一手云计算产品评测报告</a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="leaf icon"></i>
+                                    <div class="content">
+                                        <a title="Python进阶、求职必看的前辈经验分享" href="http://www.codingpy.com/article/qas-with-a-douban-engineer/" target="_blank">Python进阶、求职必看的前辈经验分享</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="ui tab" data-tab="popular">
+                            <div class="ui relaxed divided animated list">
+
+                                <div class="item">
+                                    <i class="fork icon"></i>
+                                    <div class="content">
+                                        <a title="Vim与Python真乃天作之合" href="http://www.codingpy.com/article/vim-and-python-match-in-heaven/" target="_blank">Vim与Python真乃天作之合</a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="fork icon"></i>
+                                    <div class="content">
+                                        <a title="自己动手开发网络服务器（一）" href="http://www.codingpy.com/article/build-a-simple-web-server-part-one/" target="_blank">自己动手开发网络服务器（一）</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="ui tab" data-tab="random">
+                            <div class="ui relaxed divided animated list">
+
+                                <div class="item">
+                                    <i class="leaf icon"></i>
+                                    <div class="content">
+                                        <a title="程序员的日常：听到这些话，意味着你有麻烦了..." href="http://www.codingpy.com/article/commitstrip-these-phrases-foretell-problems/" target="_blank">程序员的日常：听到这些话，意味着你有麻烦了...</a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="world icon"></i>
+                                    <div class="content">
+                                        <a title="Jetbrains公司正式发布Pycharm 5" href="http://www.codingpy.com/article/jetbrains-releases-pycharm5/" target="_blank">Jetbrains公司正式发布Pycharm 5</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第二段：热门标签 -->
+                    <div class="ui segment">
+                        <div class="ui pointing secondary menu red section-title">
+                            <div class="item active">
+                                <i class="tags icon"></i>热门标签</div>
+                        </div>
+
+                        <div class="ui labels">
+
+                            <a href="http://www.codingpy.com/tag/python_ide/" class="ui label">IDE</a>
+
+                            <a href="http://www.codingpy.com/tag/pycon/" class="ui label">PyCon</a>
+
+                            <a href="http://www.codingpy.com/tag/translation/" class="ui label">编译</a>
+
+                            <a href="http://www.codingpy.com/tag/flask/" class="ui label">Flask</a>
+
+                        </div>
+                    </div>
+
+                    <!-- 第三段：推荐书籍，广告，微信公众号 -->
+                    <div class="ui sticky">
+
+                        <!-- 微信公众号 -->
+                        <div class="follow-me ui segment" id="wechat">
+                            <div class="ui pointing secondary menu green section-title">
+                                <div class="item active">
+                                    <i class="wechat icon"> </i> 扫码关注老梅
+                                </div>
+
+                            </div>
+                            <img class="ui image fluid rounded centered" src="./static/images/qrcode_wechat.jpg" style="width:220px;" alt="扫码微信公众号">
+                        </div>
+
+                        <!-- 广告 -->
+                        <!-- <div class="ui segment">
+                                <a href="http://www.qcloud.com/redirect.php?redirect=1001&amp;cps_key=d5f7fc561866a83c9b824ab4475aaaa4">
+                                    <img src="http://codingpy-1252715393.file.myqcloud.com/images/300x100.jpg" alt="腾讯云CPS" class="ui fluid image">
+                                </a>
+                            </div> -->
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="ui inverted vertical footer segment">
+                <div class="ui container">
+                    <div class="ui stackable inverted divided equal height grid">
+                        <div class="four wide column center aligned">
+                            <h4 class="ui inverted header">关于本站</h4>
+                            <div class="ui inverted link list">
+                                <a href="#" class="item">站点地图</a>
+                                <a href="#" class="item">联系我们</a>
+                                <a href="#" class="item">粤ICP备xxxx</a>
+                            </div>
+                        </div>
+
+                        <div class="four wide column center aligned">
+                            <h4 class="ui inverted header">关注老梅</h4>
+                            <a class="ui circular wechat icon button"  target="_blank">
+                                <i class="wechat green icon"></i>
+                            </a>
+                            <!-- 将下面的元素设置为 ui popup的话，其默认是隐藏的， -->
+                            <!-- 隐藏的img元素必须放置于需要hover元素的下面：紧跟上面的a元素 -->
+                            <!-- 使用js，选中该a元素，对其使用popup()函数 -->
+                            <img src="./static/images/qrcode_wechat_marco.jpg" class="ui popup">
+                          
+                            <a class="ui circular weibo red icon button" href="http://weibo.com/mxh20999" target="_blank">
+                                <i class="weibo icon"></i>
+                            </a>
+                            
+                            <a class="ui circular icon button" href="https://github.com/wowmarcomei" target="_blank">
+                                <i class="github alternate blue icon"></i>
+                            </a>
+                        </div>
+
+                        <div class="four wide column center aligned">
+                            <h4 class="ui inverted header">导航</h4>
+                            <div class="ui inverted link list">
+                                <a target="_blank" href="/category/news/" class="item">资讯</a>
+                                <a target="_blank" href="/category/tutorials/" class="item">教程</a>
+                                <a target="_blank" href="/category/katas/" class="item">练习</a>
+                                <a target="_blank" href="/category/downloads/" class="item">资源</a>
+                                <a target="_blank" href="/category/other-thinkings/" class="item">其他</a>
+                            </div>
+                        </div>
+
+                        <div class="four wide column center aligned">
+                            <h4 class="ui inverted header">Powered by</h4>
+                            <div class="ui images center aligned">
+                                <a target="_blank" href="https://www.djangoproject.com/">
+                                    <img src="./static/images/django.png" alt="django">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // 创建固定元素
+            if (matchMedia('only screen and (max-width: 768px)').matches) {
+                console.log('Currently view mobile version of the site.');
+            } else {
+                $('.ui.sticky').sticky({
+                    // 当遇到类名为articles的元素时，类为.ui.sticky的元素将会被固定起来。
+                    context: '.articles'
+                }).sticky('refresh');
+            }
+
+            // 创建sidebar，并将其attach到menu open
+            $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item')
+                ;
+
+        });
+
+        $('#tab-nav .item').tab();
+
+        // 百度分享popup
+        $('.share-article.ui.button').popup({
+            position: 'left center',
+            hoverable: true,
+        });
+
+        //百度分享
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "1",
+                "bdSize": "24"
+            },
+            // bdText   string  自定义 分享的内容
+            // bdDesc  string  自定义 分享的摘要
+            // bdUrl   string  自定义 分享的Url地址
+            // bdPic   string  自定义 分享的图片
+            "share": {}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+        // 划过该wechat按钮时弹出微信二维码对应的img元素
+        $('.ui.circular.wechat.icon.button').popup();
+        
+
+    </script>
+
+</body>
+
+</html>
