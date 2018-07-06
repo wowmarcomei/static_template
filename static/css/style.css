@@ -207,6 +207,13 @@ div.header.item a {
     color: #39c;
 }
 
+.ui.sticky.bound.bottom {
+    position:static;
+    -webkit-transition:none;
+    transition:none;
+    /* z-index:800 */
+}
+
 
 /*footer*/
 
@@ -225,18 +232,13 @@ footer .ui.images img {
     margin-right: 1rem;
 }
 
-/* #mywechat{
-    width: 5px !important;
-} */
-
-/* footer .ui.circular.icon.button:hover {
-    color: red !important;
-} */
-
-/* img .mydjango{
-    width: 100px !important;
-    height: 100px !important;
-} */
+footer .ui.container.footer{
+    /* display: flex !important; */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(184, 183, 183) !important;
+}
 
 .ui.center.aligned button {
     margin-bottom: 1rem;
@@ -284,8 +286,8 @@ footer .ui.images img {
     #related__wrapper {
         max-width: 100%;
     }
-    #main .articles.eleven.wide.column,
-    aside#aside__wrapper.five.wide.column {
+    #main .articles.eleven.wide.column,aside
+    #aside__wrapper.five.wide.column {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
